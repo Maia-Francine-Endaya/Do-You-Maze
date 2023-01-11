@@ -568,6 +568,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1599812692}
+--- !u!1 &1292862018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5052480838541622545, guid: d0be324ff6c2e43a9bdd726584b54795, type: 3}
+  m_PrefabInstance: {fileID: 5052480837925421677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1292862023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5052480838541622765, guid: d0be324ff6c2e43a9bdd726584b54795, type: 3}
@@ -1230,9 +1235,13 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 6013156320452061730}
+    - target: {fileID: -231106856116992167, guid: d0be324ff6c2e43a9bdd726584b54795, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1292862018}
     - target: {fileID: 5052480838541622545, guid: d0be324ff6c2e43a9bdd726584b54795, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: Button_01
       objectReference: {fileID: 0}
     - target: {fileID: 5052480838541622765, guid: d0be324ff6c2e43a9bdd726584b54795, type: 3}
       propertyPath: m_RootOrder
@@ -1289,7 +1298,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6013156318741576233, guid: d3543e5ccf9f04e78a519a773f055fdc, type: 3}
       propertyPath: m_Name
-      value: Doors
+      value: Door_01
       objectReference: {fileID: 0}
     - target: {fileID: 6013156318741576237, guid: d3543e5ccf9f04e78a519a773f055fdc, type: 3}
       propertyPath: m_RootOrder

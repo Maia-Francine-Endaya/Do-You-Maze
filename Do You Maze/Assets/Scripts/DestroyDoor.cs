@@ -5,23 +5,15 @@ using UnityEngine;
 public class DestroyDoor : MonoBehaviour
 {
   public GameObject door;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  public GameObject button;
 
+    //Destroys the door instance
     void OnTriggerEnter(Collider other)
     {
       if (other.tag == "Player") 
       {
         Destroy(door);
+        Destroy(button);
       }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
