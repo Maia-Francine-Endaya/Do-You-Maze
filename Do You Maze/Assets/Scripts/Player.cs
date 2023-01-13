@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
   Rigidbody rb;
   [SerializeField] float movementSpeed = 6f;
@@ -40,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
       {
         currentHealth -= damage;
         health.SetHealth(currentHealth);
+      }
+
+      if (currentHealth == 0) {
+        SceneManager.LoadScene(2);
       }
     }
 }
