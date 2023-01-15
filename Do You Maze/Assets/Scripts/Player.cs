@@ -37,14 +37,24 @@ public class Player : MonoBehaviour
         rb.velocity  = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
       }
 
-      void TakeDamage(int damage)
+      if (currentHealth == 0) {
+        SceneManager.LoadScene(2);
+      }
+    }
+
+    void TakeDamage(int damage)
       {
         currentHealth -= damage;
         health.SetHealth(currentHealth);
       }
 
-      if (currentHealth == 0) {
-        SceneManager.LoadScene(2);
+    void OnTriggerEnter(Collider collision)
+    {
+      Debug.Log("On Collision Enter");
+      if(collision.gameObject.tag == "Obstacle")
+      {
+        Debug.Log("Damage");
+        TakeDamage(1);
       }
     }
 }
