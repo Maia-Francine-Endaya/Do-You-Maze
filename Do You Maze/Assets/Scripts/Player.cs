@@ -35,7 +35,6 @@ public class Player : MonoBehaviour
       if (Input.GetKeyDown("space"))
       {
         rb.velocity  = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
-        TakeDamage(1);
       }
 
       void TakeDamage(int damage)
@@ -46,6 +45,14 @@ public class Player : MonoBehaviour
 
       if (currentHealth == 0) {
         SceneManager.LoadScene(2);
+      }
+
+      void OnTriggerEnter(Collider other)
+      {
+        if (other.gameObject.tag == "Obstacle")
+        {
+          TakeDamage(1);
+        }
       }
     }
 }
