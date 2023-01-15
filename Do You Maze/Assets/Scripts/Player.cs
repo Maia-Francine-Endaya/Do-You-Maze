@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
   Rigidbody rb;
   [SerializeField] float movementSpeed = 6f;
+  [SerializeField] float jumpForce = 5f;
 
   public int maxHealth = 5;
   public int currentHealth;
@@ -30,10 +31,10 @@ public class Player : MonoBehaviour
 
         rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
 
-      //Player health
-      //This is a test as there are no obstacles yet
-      if (Input.GetKeyDown(KeyCode.Space))
+      
+      if (Input.GetKeyDown("space"))
       {
+        rb.velocity  = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
         TakeDamage(1);
       }
 
