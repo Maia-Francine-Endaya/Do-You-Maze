@@ -35,7 +35,6 @@ public class Player : MonoBehaviour
       if (Input.GetKeyDown("space"))
       {
         rb.velocity  = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
-        TakeDamage(1);
       }
 
       void TakeDamage(int damage)
